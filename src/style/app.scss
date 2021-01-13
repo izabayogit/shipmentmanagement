@@ -1,0 +1,82 @@
+
+body {
+    align-items: center;
+    background: rgb(235, 233, 233) !important;
+    border: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .signup-card{
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+   
+    
+  }
+  .position-div{
+    position: relative; 
+    display: flex;
+      justify-content: center;
+  }
+
+  .signup-div{
+        margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(25%);
+    transform: translateY(15%);
+     
+  }
+  
+  .input{
+     
+      width: 50%
+  }
+  .form-button{
+    width: 100%;
+  }
+  .input-form{
+    margin:20px
+  }
+  .mr-auto{
+      position:absolute;
+      right: 20px;
+  }
+  .have-account{
+      text-align: center;
+  }
+  .brand{
+    color:white !important;
+    font-style:  italic bold;
+  }
+  .navigation{
+    background: #0073aa !important;
+    border: none !important
+    // #0073aa
+  }
+  .card{
+      border: none !important;
+      border-radius:5px !important
+  }
+  .welcome-col{
+      margin-left: 15%;
+      position: relative; 
+      background: white !important ;
+  }
+  .aside-text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(25%);
+    transform: translateY(19%);
+  }
+  .aside-h1{
+    font-style: bold !important ;
+      color: rgb(197, 192, 192) !important
+      
+  }
+  .aside-p{
+    font-style: bold !important;
+  }
