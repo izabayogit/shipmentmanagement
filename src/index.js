@@ -8,6 +8,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import combineReducers from './Redux/reducers';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const middleware = [thunk];
 const store = createStore(
