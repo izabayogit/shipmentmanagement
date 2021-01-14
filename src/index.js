@@ -3,23 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createStore, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import combineReducers from './Redux/reducers';
-import thunk from 'redux-thunk';
-import { Provider } from 'react-redux';
+import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Store from './Store'
 
-const middleware = [thunk];
-const store = createStore(
-combineReducers,
-{}, 
-composeWithDevTools(applyMiddleware(...middleware))
-);
+
 ReactDOM.render(
-  <Provider store={store}>
+  <Store>
     <App />
-  </Provider>,
+  </Store>,
   document.getElementById('root')
 );
 
