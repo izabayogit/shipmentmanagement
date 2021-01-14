@@ -7,7 +7,7 @@ import Welcome from './Welcome'
 import {userSignup} from '../../Redux/actions/authActions'
 import {  toast } from 'react-toastify';
  
-// toast.configure()
+toast.configure()
 class Signup extends Component {
   constructor(props) {
     super(props);
@@ -21,10 +21,10 @@ class Signup extends Component {
     this.handeleSubmit = this.handleSubmit.bind(this);
     this.redirect = this.redirect.bind(this)
       }
-      // notifySuccess = () =>{
-      //   toast.success('Signup is successful........',{position: toast.POSITION.BOTTOM_LEFT});
+      notifySuccess = () =>{
+        toast.success('Signup is successful........',{position: toast.POSITION.BOTTOM_LEFT});
        
-      // }
+      }
   redirect = () =>{
     return this.props.history.push('/login');
      
@@ -74,13 +74,15 @@ class Signup extends Component {
       }
       
     render() {
-     if (this.props.user_signup?.data?.success){         
+     if (this.props.user_signup?.data?.success){
+      this.notifySuccess();         
       this.redirect();
       }
         return (
 <div className="signup-container">
      <Header/>
-     <Row>
+     <Row className="responsive-row">
+       
          <Welcome/>
          <Col>  
         <div className="position-div">
@@ -110,11 +112,10 @@ class Signup extends Component {
                     
                     </Button>
                     <div className="have-account">
-                    <a href="#"> Already Have Account ? </a>
+                    <a href="/login"> Already Have Account ? </a>
                     </div>
                 </Form>
-            </Card>
-         
+            </Card>         
         </div>     
      </div>
      </Col>
