@@ -1,23 +1,13 @@
-import React from 'react';
-import Signup from './components/home/Signup';
+import React,  { Component } from 'react';
 import './style/app.scss'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  
-} from 'react-router-dom';
+import Routes from './routes/Index'
 
-function App() {
+class App extends Component {
+  render(){
   return (
-    <Router>
-
-     <Switch>
-        <Route   path= "/" exact component={Signup}/>
-         
-       </Switch>
-     </Router>
+      <Routes/>        
   );
+}
 }
 
 export default App;

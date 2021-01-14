@@ -31,10 +31,6 @@ body {
      
   }
   
-  .input{
-     
-      width: 50%
-  }
   .form-button{
     width: 100%;
   }
@@ -74,9 +70,23 @@ body {
   }
   .aside-h1{
     font-style: bold !important ;
-      color: rgb(197, 192, 192) !important
+      color: white !important
       
   }
   .aside-p{
     font-style: bold !important;
+  }
+  .label{
+    display: flex;
+  }
+  .label p{
+    position: absolute;
+    right: 25px;
+    color: rgb(214, 114, 114);
+    font-size: 12px;
+  }
+  .label h6{
+    
+    color: rgb(236, 91, 91);
+    
   }
