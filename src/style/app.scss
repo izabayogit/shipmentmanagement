@@ -177,3 +177,113 @@ body {
     }
   }
 
+/*.........................*/
+
+.dashboard-container{
+  height: 100%;
+  background: white;
+  margin:3%;
+  border-radius: 5px;
+}
+.nav-tab{
+  width: 12rem !important;
+}
+.right-dash{
+  width: 12.1rem;
+  border: 5px solid white;
+  z-index: 30;
+
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color:#000024 !important;
+  background-color: #fafafa !important;
+}
+
+.right-dash a {
+  color: #ccc !important;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+
+.tab-icon{
+  margin-right: 10px;
+  font-size: 30px;
+}
+.dash-logo{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  color: #0073aa;
+}
+.dash-search{
+  max-width: 40% !important;
+  margin-top: 20px;
+ 
+}
+.dash-bar{
+  display:flex; 
+}
+.dash-title{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 16.1rem;
+  color:#002147;
+  font-style: bold;
+}
+.middle-dash-div{
+  background: #f8f8ff;
+  position: relative;
+  right: 9.1rem;
+  padding-bottom: 30px;
+}
+
+.dash-intro-photo{
+  width: 15rem;
+  height: 8rem;
+  border-radius: 6px;
+}
+.dash-intro{
+  display: flex;
+  background: #fffafa;
+  border: 1px solid white;
+  border-radius: 6px;
+  margin: 20px;
+}
+.custom-table{
+  background: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin: 20px;
+}
+.customer-table-div{
+  max-width: 36.7rem;
+}
+.table td, .table th {
+  width: 20px !important;
+  font-size: 12px !important;
+}
+.dash-aside h3{
+  color:#ff355e;
+  font-family: bold;
+}
+.profile-card{
+  border:none !important;
+  z-index: 30 !important;
+  text-align: center;
+}
+.profile-pic{
+  border-radius: 25rem !important;
+  width: 10rem !important;
+  position: relative;
+  left: 5rem
+}
+.profile-name{
+ color: #191970;
+ font-style: bold;
+}
+.profile-role{
+  color:#bcd4e6;
+  font-family: bold;
+}
