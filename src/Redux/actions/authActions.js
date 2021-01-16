@@ -13,3 +13,15 @@ export const userSignup = ( user_name, password, display_name, role_id ) => asyn
         'users/signup'
     ))
 };
+
+export const userSignin = ( username, password ) => async (dispatch) => {
+    dispatch(apiRequest(
+        type.SIGN_IN_START,
+        'post',
+        { username, password  },
+        type.SIGN_IN_FAILURE,
+        type.SIGN_IN_SUCCESS,
+        type.SIGN_IN_END,
+        'users/login'
+    ))
+};
