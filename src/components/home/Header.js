@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Navbar, Nav} from 'react-bootstrap'
+import {Link } from 'react-router-dom';
  
 class Header extends Component {
     render() {
@@ -10,8 +11,8 @@ class Header extends Component {
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link href="/login" className="brand">Login</Nav.Link>
-      <Nav.Link href="/" className="brand">Signup</Nav.Link>
+      <Nav.Link  > <Link to="/login" className="brand">Login</Link></Nav.Link>
+      <Nav.Link ><Link to="/" className="brand">Signup</Link></Nav.Link>
   
     </Nav>
 

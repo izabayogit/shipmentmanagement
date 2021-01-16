@@ -6,13 +6,14 @@ import Header from './Header';
 import Welcome from './Welcome'
 import {userSignup} from '../../Redux/actions/authActions'
 import {  toast } from 'react-toastify';
+import {Link } from 'react-router-dom';
  
 toast.configure()
 class Signup extends Component {
   constructor(props) {
     super(props);
         this.state = {
-        username:'', password: '', retyped: '', roleId: '1', displayName: '', error: '',
+        username:'', password: '', retyped: '', roleId: 1, displayName: '', error: '',
         usernameError:'', passwordError: '', retypedError: '', displayNameError: '', location: null
     }
 
@@ -100,7 +101,7 @@ class Signup extends Component {
                             <Form.Control name="password" type="password" placeholder="Password"  onChange={this.handleInput} value={this.state.password}/>
                     </Form.Group>
                     <Form.Group className="formgroup">
-                            <Form.Label className='label'>Retype Passwrod  <p>{this.state.retypedError}</p></Form.Label>
+                            <Form.Label className='label'>Retype Password  <p>{this.state.retypedError}</p></Form.Label>
                             <Form.Control name="retyped" type="password" placeholder="Password"  onChange={this.handleInput} value={this.state.retyped}/>
                     </Form.Group>
                     <Form.Group className="formgroup">
@@ -112,7 +113,7 @@ class Signup extends Component {
                     
                     </Button>
                     <div className="have-account">
-                    <a href="/login"> Already Have Account ? </a>
+                    <Link to="/login" ><a> Already Have Account ? </a></Link>
                     </div>
                 </Form>
             </Card>         

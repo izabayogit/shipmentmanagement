@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { HashRouter, Route, Switch } from 'react-router-dom';
-import Signup from '../components/home/Signup'
-import Login from '../components/home/Login'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {Signup, Login} from '../components/home'
+import {Dashboard} from '../components/container';
+import PrivateRoute from './PrivateRoute';
 
 class Routes extends Component {
   render() {
-    console.log('Routes props', this.props.currentUser);
     return (
-      <HashRouter>
+      <Router>
         <Switch>
-        <Route exact path="/" component={Signup} />
           <Route exact path="/login" component={Login} />
-          
+          <Route exact path="/" component={Signup} />
+          <PrivateRoute exact path="/dashboard" component={Dashboard}/>
         </Switch>
-      </HashRouter>
+      </Router>
     );
   }
 }
 
-export default connect()(Routes);
+export default Routes;
