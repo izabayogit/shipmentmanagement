@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Col, InputGroup, FormControl } from 'react-bootstrap';
-// import Vtab from '../../common/Vtab'
 import { FaSearch } from 'react-icons/fa';
 import CustomerTable from './CustomerTable';
 
@@ -40,8 +39,6 @@ class Dashboard extends Component {
                                 </Scrollbars>                        
                             </div>
                         </Col>
-                    
-                  
                 </div>
             </div>
         );
