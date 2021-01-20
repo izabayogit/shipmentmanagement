@@ -25,3 +25,9 @@ export const userSignin = ( username, password ) => async (dispatch) => {
         'users/login'
     ))
 };
+
+
+export const logoutUser = () => (dispatch) => {
+    localStorage.removeItem('authToken');
+    return dispatch({type: type.LOGOUT_USER});
+};

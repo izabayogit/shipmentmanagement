@@ -1,100 +1,50 @@
 import React, { Component } from 'react';
-import { FaUserCircle } from 'react-icons/fa';
 import {Table} from 'react-bootstrap'
-import { Scrollbars } from 'react-custom-scrollbars';
+import moment from 'moment'
+import { Skeleton } from 'antd';
+
 class CustomerTable extends Component {
     render() {
+        const customers = this.props.customers?.data;
+        console.log(this.props.customers, '.............');
         return (
-            <Scrollbars style={{ width: 600, height: 250 }}> 
+          
             <div className='customer-table-div'>
+            
                 <Table responsive="sm" className='custom-table'>
                   
                     <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Customer</th>
+                        <th>CustomerID</th>
                         <th>Name</th>
-                        <th>Product</th>
-                        <th> Amout</th>
+                        <th>Phone</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th> DateCreated </th>
+                        <th> UserID</th>
+                        <th> IsActive</th>
                     </tr>
                     </thead>
                    
                         <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td><FaUserCircle /></td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td><FaUserCircle /></td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td><FaUserCircle /></td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td><FaUserCircle /></td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td><FaUserCircle /></td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td><FaUserCircle /></td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td><FaUserCircle /></td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td><FaUserCircle /></td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td><FaUserCircle /></td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td><FaUserCircle /></td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                            <td>Table cell</td>
-                        </tr>
+                       { this.props.customers?.loading? 
+                       <Skeleton active />:   
+                          customers?.map((allCustomers) =>(allCustomers.map((customer, index)=>(
+                        <tr key={index}>
+                            <td>{customer.CustomerId}</td>
+                            <td>{customer.Name} </td>
+                            <td>{customer.Phone}</td>
+                            <td>{customer.Contact}</td>
+                            <td>{customer.Email}</td>
+                            <td>  {moment(customer.DateCreated).format('MMMM Do YYYY')}</td>
+                            <td>{customer.UserId}</td>
+                            <td>{customer.IsActive}</td>
+                        </tr>))
+                    ))}
                         </tbody>
                      
                 </Table>
             </div>
-            </Scrollbars> 
         );
     }
 }
