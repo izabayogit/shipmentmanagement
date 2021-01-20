@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import {Row, Col, InputGroup, FormControl } from 'react-bootstrap';
+=======
+import {Row, Col, InputGroup, FormControl, Card} from 'react-bootstrap';
+>>>>>>> 51686650ef26fe4cd9cdfcaecb329f9d7559d327
 import Vtab from '../../common/Vtab'
 import { FaSearch } from 'react-icons/fa';
 import CustomerTable from './CustomerTable';
@@ -46,7 +50,21 @@ class Dashboard extends Component {
                             </div>
                         </Col>
                         <Col>
+<<<<<<< HEAD
                             <Profile/>
+=======
+                            <div className='profile-div'>
+                                <Card className='profile-card'>     
+                                    <Card.Img variant="top" className='profile-pic' src="https://previews.123rf.com/images/kakigori/kakigori1502/kakigori150200058/36671336-positive-young-man-making-thumbs-up-sign-with-both-hands.jpg" />
+                                    <Card.Body>
+                                        <Card.Title className='profile-name'>Dumy John</Card.Title>
+                                        <Card.Text className='profile-role'>
+                                        Admin
+                                        </Card.Text>
+                                    </Card.Body>
+                                </Card>
+                            </div>
+>>>>>>> 51686650ef26fe4cd9cdfcaecb329f9d7559d327
                         </Col>
                     </Row>
                 </div>
