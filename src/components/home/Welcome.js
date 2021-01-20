@@ -8,13 +8,13 @@ class Welcome extends Component {
         const h1 = ' Your Businnes Lorem Ipsum has been the industry standard dummy text ever since the 1500s'
         const h2='Get started today and Join the first Shipping legend. increase your customer satisfaction '
         return (
-            
+
                <Col >
-                   <div className='welcome-col'>
-                       <div className="aside-text">
-                           <ControlledCarousel h1= {h1} paragraph={p1} h2={h2}/>
-                 </div>
-                 </div>
+                    
+            
+                        <ControlledCarousel h1= {h1} paragraph={p1} h2={h2}/>
+         
+             
                </Col> 
         
         );

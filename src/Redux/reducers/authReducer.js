@@ -77,6 +77,16 @@ export default function (state = initState, action) {
                 ...state,
                 currentUser: {...state.currentUser },
             };
+            case type.LOGOUT_USER:
+                return { 
+                    ...state, currentUser: {
+                    loading: false,
+                    success: false,
+                    message: null,
+                    error: null
+                } 
+            };
+    
             default:
                 return state;
         }

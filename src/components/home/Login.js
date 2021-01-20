@@ -50,14 +50,13 @@ class Login extends Component {
         }}
     }
     render() {
-        console.log(this.props.currentUser)
         return (
             <div>
                 <Header/>
-               <div className="position-div-login">
-        <div className="signup-div-login">
-        
-            <Card className="signup-card">
+            
+        <div className='login-div'>
+            <div className='login-position'>
+            <Card className="login-card">
                 <Form className="input-form" >
                     <Form.Group className="formgroup">
                             <Form.Label className='label'>Username <p>{this.state.usernameError}</p></Form.Label>
@@ -65,20 +64,19 @@ class Login extends Component {
                     </Form.Group>
 
                     <Form.Group className="formgroup">
-                            <Form.Label className='label'>Password <p>{this.passwordError}</p></Form.Label>
+                            <Form.Label className='label'>Password <p>{this.state.passwordError}</p></Form.Label>
                             <Form.Control name="password" type="password" placeholder="Password" onChange={this.handleChange} value={this.state.password}/>
                     </Form.Group>
                     <Button variant="primary"  className= 'form-button' onClick={this.handleSubmit}>
                     {this.props.currentUser.loading? <Loader/>  :'Login'}                
                     </Button>
                     <div className="have-account" >
-                    <Link to="/" ><a> Don&apos;t Have Account ? </a></Link>
+                    <Link to="/" > Don&apos;t Have Account ? </Link>
                     </div>
                 </Form>
             </Card>
-         
-        </div>     
-     </div>
+            </div>
+            </div>
             </div>
         );
     }

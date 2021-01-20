@@ -1,3 +1,3 @@
-import Dashboard from './dashboard/Dashboard';
+import Dashboard from './dashboard/index';
 
 export{Dashboard}

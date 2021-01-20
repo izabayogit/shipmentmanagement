@@ -12,6 +12,10 @@ class Vtab extends Component {
     render() {
         return (
             <div>
+                <div className='right-dash'>
+                                <h6 className='dash-logo'>Shipmentmanagement</h6>
+                           
+                           
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                   <Row>
                     <Col sm={3}>
@@ -41,6 +45,7 @@ class Vtab extends Component {
                     </Col>
                   </Row>
                 </Tab.Container>
+                </div>
             </div>
         );
     }

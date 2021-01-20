@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Form, Button, Card, Row, Col} from 'react-bootstrap';
+import {Form, Button, Card, Row, Col,} from 'react-bootstrap';
 import Loader from '../common/Spinner';
 import {  connect } from 'react-redux';
 import Header from './Header';
@@ -73,22 +73,27 @@ class Signup extends Component {
       this.setState({username: '', password: '', retyped: '', displayName: '', error: ''});
     
       }
-      
+      UNSAFE_componentWillReceiveProps(nextProps){
+        if(!nextProps.user_signup?.loading)
+        {if (nextProps.user_signup?.data?.success) {
+          this.notifySuccess();         
+          this.redirect();
+        }}
+    }
     render() {
-     if (this.props.user_signup?.data?.success){
-      this.notifySuccess();         
-      this.redirect();
-      }
         return (
 <div className="signup-container">
      <Header/>
-     <Row className="responsive-row">
-       
+     <div className='signup-div'>
+       <div className='signup-position'>
+   
+     
+     <Row className="responsive-row">  
          <Welcome/>
          <Col>  
-        <div className="position-div">
-        <div className="signup-div">
-        
+
+     
+        <div>
             <Card className="signup-card">
                 <Form className="input-form" >
                     <Form.Group className="formgroup">
@@ -113,14 +118,17 @@ class Signup extends Component {
                     
                     </Button>
                     <div className="have-account">
-                    <Link to="/login" ><a> Already Have Account ? </a></Link>
+                    <Link to="/login" > Already Have Account ? </Link>
                     </div>
                 </Form>
             </Card>         
-        </div>     
-     </div>
+          </div>
+   
      </Col>
      </Row>
+    
+     </div>
+     </div>
   </div>
         );
     }
