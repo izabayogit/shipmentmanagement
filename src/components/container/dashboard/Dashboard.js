@@ -25,7 +25,7 @@ class Dashboard extends Component {
                                         </InputGroup.Append>
                                     </InputGroup>
                                 </div>
-                                <Scrollbars style={{ width: 730, height: 500 }}>
+                                <Scrollbars style={{ width: 750, height: 500 }}>
                                 {/* <div className="dash-intro">
                                     <aside className="dash-aside">
                                         <h3> Welcome Dumy</h3>

@@ -6,7 +6,6 @@ import { Skeleton } from 'antd';
 class CustomerTable extends Component {
     render() {
         const customers = this.props.customers?.data;
-        console.log(this.props.customers, '.............');
         return (
           
             <div className='customer-table-div'>
